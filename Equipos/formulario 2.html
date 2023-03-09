@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Modal 1 cajón</title>
+    <style>
+        .icono {
+            width: 350px;
+            height: auto;
+        }
+
+        .modal-login {
+            width: 100%;
+            min-width: 90%
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Crear equipo
+    </button>
+
+    <!-- Modal -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div
+                        class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-login text-center mx-auto">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Crear equipo</h5>
+                            </div>
+                            <div>
+                                <!-- Cabecera -->
+                                <div class="d-flex flex-row col-11 rounded border-primary m-auto">
+                                    <div
+                                        class="d-flex align-content-center justify-content-center w-50 p-2 bg-primary bg-gradient text-white">
+                                        <i class="fas fa-1 m-1"></i> Básico
+                                    </div>
+                                    <div
+                                        class="d-flex align-content-center justify-content-center w-50 p-2 bg-secondary bg-gradient text-white">
+                                        <i class="fas fa-2 m-1"></i> Detalle
+                                    </div>
+                                </div>
+                                <!-- Cuerpo -->
+                                <div class="d-flex flex-row flex-wrap">
+                                    <div class="p-2 col-sm-4 col-12 mx-auto">
+                                        <img src="https://cdn-icons-png.flaticon.com/512/220/220218.png" alt="icono"
+                                            class="icono mx-auto align-self-auto img-fluid">
+                                    </div>
+                                    <div class="col-sm-8 col-12 p-3">
+                                        <form action="">
+                                            <label for="Nombre" class="mt-1 form-label float-start">
+                                                Nombre Del equipo <i class="fas fa-exclamation"></i> <span
+                                                    class="text-danger fw-lighter"> No se puede cambiar una vez que se
+                                                    haya creado
+                                                    el equipo</span>
+                                            </label>
+                                            <br>
+                                            <input type="text" name="nombre" id="nombre" class="rounded w-100 mt-2"
+                                                required>
+                                            <br>
+                                            <div class="mb-3">
+                                                <label for="Descripción"
+                                                    class="form-label float-start">Descripción</label>
+                                                <textarea class="form-control" name="Descripción" id="Descripción"
+                                                    rows="3" placeholder="Escribe Descripción"></textarea>
+                                            </div>
+                                            <div class="btn-group d-flex flex-row" role="group"
+                                                aria-label="Basic radio toggle button group">
+                                                <input type="radio" class="btn-check" name="btnradio" id="btnradio1"
+                                                    autocomplete="off" checked value="publico">
+                                                <label class="btn btn-outline-primary" for="btnradio1">Publico</label>
+
+                                                <input type="radio" class="btn-check" name="btnradio" id="btnradio2"
+                                                    autocomplete="off" value="privado">
+                                                <label class="btn btn-outline-primary" for="btnradio2">Privado</label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-column m-3 border-top">
+                                    <div class="d-flex flex-row m-3">
+                                        <p> El Juego que mi equipo Jugó <span class="text-danger fw-lighter"> No se
+                                                puede cambiar
+                                                una vez se haya creado el equipo</span> </p>
+                                    </div>
+                                    <div class="container-fluid p-3 overflow-hidden text-center">
+                                        <div class="row gx-4">
+                                            <div class="col-sm-4 col-12 mb-3 float-start">
+                                                <select class="form-select col-12" aria-label="Default select example">
+                                                    <option selected>Selecciona Juego</option>
+                                                    <option value="League_of_legends">League Of Legends</option>
+                                                    <option value="Apex_Legends">Apex Legends</option>
+                                                    <option value="Counter_Strike">Counter Strike</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Pie -->
+                                <div class="modal-footer mt-4">
+                                    <div class="d-inline-flex align-content-center justify-content-center w-100">
+                                        <button type="button" class="btn btn-outline-secondary m-3 w-25 rounded-pill"
+                                            data-bs-dismiss="modal">Atrás</button>
+                                        <button type="submit"
+                                            class="btn btn-primary m-3 w-25 rounded-pill">Aceptar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
